@@ -1,0 +1,9 @@
+c:\users\gregoire\documents\visual studio 2013\Projects\happnFBidExtractor\happnFBidExtractor\bin\Debug\happnFBidExtractor.exe.config
+c:\users\gregoire\documents\visual studio 2013\Projects\happnFBidExtractor\happnFBidExtractor\bin\Debug\happnFBidExtractor.exe
+c:\users\gregoire\documents\visual studio 2013\Projects\happnFBidExtractor\happnFBidExtractor\bin\Debug\happnFBidExtractor.pdb
+c:\users\gregoire\documents\visual studio 2013\Projects\happnFBidExtractor\happnFBidExtractor\obj\Debug\happnFBidExtractor.csprojResolveAssemblyReference.cache
+c:\users\gregoire\documents\visual studio 2013\Projects\happnFBidExtractor\happnFBidExtractor\obj\Debug\happnFBidExtractor.happnFBidExtractor.resources
+c:\users\gregoire\documents\visual studio 2013\Projects\happnFBidExtractor\happnFBidExtractor\obj\Debug\happnFBidExtractor.Properties.Resources.resources
+c:\users\gregoire\documents\visual studio 2013\Projects\happnFBidExtractor\happnFBidExtractor\obj\Debug\happnFBidExtractor.csproj.GenerateResource.Cache
+c:\users\gregoire\documents\visual studio 2013\Projects\happnFBidExtractor\happnFBidExtractor\obj\Debug\happnFBidExtractor.exe
+c:\users\gregoire\documents\visual studio 2013\Projects\happnFBidExtractor\happnFBidExtractor\obj\Debug\happnFBidExtractor.pdb
