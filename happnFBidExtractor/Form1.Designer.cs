@@ -31,6 +31,8 @@
             this.rtbInputText = new System.Windows.Forms.RichTextBox();
             this.rtbOutputText = new System.Windows.Forms.RichTextBox();
             this.btnExtractor = new System.Windows.Forms.Button();
+            this.rtbOutputTextNames = new System.Windows.Forms.RichTextBox();
+            this.rtbFinalOutput = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // rtbInputText
@@ -45,7 +47,7 @@
             // 
             this.rtbOutputText.Location = new System.Drawing.Point(630, 29);
             this.rtbOutputText.Name = "rtbOutputText";
-            this.rtbOutputText.Size = new System.Drawing.Size(461, 394);
+            this.rtbOutputText.Size = new System.Drawing.Size(214, 201);
             this.rtbOutputText.TabIndex = 1;
             this.rtbOutputText.Text = "";
             // 
@@ -59,11 +61,29 @@
             this.btnExtractor.UseVisualStyleBackColor = true;
             this.btnExtractor.Click += new System.EventHandler(this.btnExtractor_Click);
             // 
+            // rtbOutputTextNames
+            // 
+            this.rtbOutputTextNames.Location = new System.Drawing.Point(859, 29);
+            this.rtbOutputTextNames.Name = "rtbOutputTextNames";
+            this.rtbOutputTextNames.Size = new System.Drawing.Size(214, 201);
+            this.rtbOutputTextNames.TabIndex = 3;
+            this.rtbOutputTextNames.Text = "";
+            // 
+            // rtbFinalOutput
+            // 
+            this.rtbFinalOutput.Location = new System.Drawing.Point(630, 236);
+            this.rtbFinalOutput.Name = "rtbFinalOutput";
+            this.rtbFinalOutput.Size = new System.Drawing.Size(443, 201);
+            this.rtbFinalOutput.TabIndex = 4;
+            this.rtbFinalOutput.Text = "";
+            // 
             // happnFBidExtractor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1103, 435);
+            this.Controls.Add(this.rtbFinalOutput);
+            this.Controls.Add(this.rtbOutputTextNames);
             this.Controls.Add(this.btnExtractor);
             this.Controls.Add(this.rtbOutputText);
             this.Controls.Add(this.rtbInputText);
@@ -78,6 +98,8 @@
         private System.Windows.Forms.RichTextBox rtbInputText;
         private System.Windows.Forms.RichTextBox rtbOutputText;
         private System.Windows.Forms.Button btnExtractor;
+        private System.Windows.Forms.RichTextBox rtbOutputTextNames;
+        private System.Windows.Forms.RichTextBox rtbFinalOutput;
     }
 }
 
