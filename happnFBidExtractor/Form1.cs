@@ -19,6 +19,10 @@ namespace happnFBidExtractor
 
         private void btnExtractor_Click(object sender, EventArgs e)
         {
+            rtbFinalOutput.Text = "";
+            rtbOutputText.Text = "";
+            rtbOutputTextNames.Text = "";
+            myProgressBar.Visible = true;
             String inputText = rtbInputText.Text;
             String outputText = "";
             String myString = "";
@@ -26,9 +30,20 @@ namespace happnFBidExtractor
             String myFbNames;
             int p = 0;
             int j = 0;
+            int totalChars = inputText.Count();
+            int newTotal = (totalChars / 100) +1;
+            myProgressBar.Maximum = newTotal;
+            myProgressBar.Minimum = 0;
+            myProgressBar.Step = 1;
 
-            for (int i = 0; i < inputText.Count()-16; ++i)
+            float divided = 0;
+
+            for (int i = 0; i < inputText.Count()-20; ++i)
             {
+                divided = i % 100;
+                if(divided==0){
+                    myProgressBar.PerformStep();
+                }
                 j = 0;
                 myFbId = "";
                 myString = ""+inputText[i] + inputText[i + 1] + inputText[i + 2] + inputText[i + 3] + inputText[i + 4] + inputText[i + 5] + inputText[i + 6];
@@ -42,17 +57,39 @@ namespace happnFBidExtractor
                     }
 
                     rtbOutputText.Text += "https://facebook.com/profile.php?id=" + myFbId + "  ||  ";
-                    //Form.ActiveForm.Refresh();
+                    rtbFinalOutput.Text += "https://facebook.com/profile.php?id=" + myFbId + "  ||  ";
+                    this.Refresh();
+                }
+
+                myFbNames = "";
+                myString = "" + inputText[i] + inputText[i + 1] + inputText[i + 2] + inputText[i + 3] + inputText[i + 4] + inputText[i + 5] + inputText[i + 6] + inputText[i + 7] + inputText[i + 8] + inputText[i + 9] + inputText[i + 10] + inputText[i + 11] + inputText[i + 12];
+                if (myString == "\"first_name\":")
+                {
+                    p = i + 14;
+                    while (inputText[p] != '"')
+                    {
+                        myFbNames += inputText[p];
+                        p++;
+                    }
+
+                    rtbOutputTextNames.Text += myFbNames + "  ||  ";
+                    rtbFinalOutput.Text += myFbNames + "  ===>>  ";
                     this.Refresh();
                 }
             }
+            /*
+            divided = 0;
 
             for (int k = 0; k < inputText.Count() - 20; ++k)
             {
+                divided = k % 100;
+                if (divided == 0)
+                {
+                    myProgressBar.PerformStep();
+                }
                 p = 0;
                 myFbNames = "";
                 myString = "" + inputText[k] + inputText[k + 1] + inputText[k + 2] + inputText[k + 3] + inputText[k + 4] + inputText[k + 5] + inputText[k + 6] + inputText[k + 7] + inputText[k + 8] + inputText[k + 9] + inputText[k + 10] + inputText[k + 11] + inputText[k + 12];
-                //MessageBox.Show(myString);
                 if (myString == "\"first_name\":")
                 {
                     p = k + 14;
@@ -64,10 +101,9 @@ namespace happnFBidExtractor
 
                     rtbOutputTextNames.Text += myFbNames + "  ||  ";
                     this.Refresh();
-                    //Form.ActiveForm.Refresh();
                 }
             }
-
+            */
             /*
             String first = "";
             String firstTemp = "";
@@ -119,8 +155,13 @@ namespace happnFBidExtractor
 
 
             */
-
+            myProgressBar.Visible = false;
             MessageBox.Show("Extraction completeted succesfully !");
+        }
+
+        private void happnFBidExtractor_Load(object sender, EventArgs e)
+        {
+            myProgressBar.Visible = false;
         }
     }
 }
